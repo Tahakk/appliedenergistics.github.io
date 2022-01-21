@@ -1,4 +1,4 @@
-import "../styles/globals.scss";
+import "../styles/dark-mode.sass";
 import type { AppProps } from "next/app";
 import Head from "next/head";
 import NavBar from "../components/NavBar";

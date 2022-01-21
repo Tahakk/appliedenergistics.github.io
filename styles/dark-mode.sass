@@ -1,0 +1,126 @@
+@import "globals.scss"
+
+\:root
+  --color-background: #36393f
+  --color-background-secondary: #2f3136
+  --color-background-navbar: #202225
+  --color-background-menu: #2f3136
+  --color-background-box: #2f3136
+  --color-box-border: #202225
+  --color-navbar-shadow: #2d2f32
+  --color-text-primary: #dcddd4
+  --color-text-secondary: #fff
+  --color-text-active: #00AFF4
+  --color-text-menu: #8e9297
+  --color-text-menu-hover: #dcddde
+  --color-menu-background-hover: #4f545c29
+  --color-menu-background-active: #4f545c52
+  --color-text-navbar: #dcddd4
+
+
+// -------------------------------------------
+//
+//  General
+//
+//
+
+html
+  background-color: var(--color-background)
+
+body
+  color: var(--color-text-primary)
+
+
+a
+  color: var(--color-text-active)
+
+  &:hover
+    color: var(--color-text-active)
+    text-decoration: underline
+
+
+// -------------------------------------------
+//
+//  Navbar
+//
+//
+
+.navbar
+  background-color: var(--color-background-menu)
+
+  &.has-shadow
+    box-shadow: 0 2px 0 0 var(--color-navbar-shadow)
+
+.navbar-item, .navbar-link
+  color: var(--color-text-navbar)
+
+a.navbar-item, a.navbar-link
+  &:hover
+    color: var(--color-text-secondary)
+    background-color: var(--color-menu-background-active)
+    text-decoration: none
+
+.navbar-brand .navbar-item img
+  content: url("/assets/logo/logo_06.png")
+
+@include touch
+  .navbar
+    background-color: var(--color-background-navbar)
+
+  .navbar-burger
+    color: var(--color-text-primary)
+
+    &:hover
+      color: var(--color-text-secondary)
+      background-color: var(--color-menu-background-hover)
+
+
+// -------------------------------------------
+//
+//  Aside - Menu
+//
+//
+
+.menu, .navbar-menu
+  background-color: var(--color-background-menu)
+
+.menu-label
+  color: var(--color-text-primary)
+
+.menu-list
+  a
+    color: var(--color-text-menu)
+
+    &:hover
+      color: var(--color-text-menu-hover)
+      background-color: var(--color-menu-background-hover)
+
+    &.is-active
+      background-color: var(--color-menu-background-active)
+
+
+// -------------------------------------------
+//
+//  Content
+//
+//
+
+.box
+  background-color: var(--color-background-box)
+  color: var(--color-text-primary)
+  border: 1px solid var(--color-box-border)
+
+code, pre
+  background-color: var(--color-background-secondary)
+  color: var(--color-text-secondary)
+  border-radius: 3px
+
+.content table thead td, .content table thead th
+  color: var(--color-text-primary)
+
+.title
+  color: var(--color-text-secondary)
+
+.content
+  h1, h2, h3, h4, h5, h6
+    color: var(--color-text-secondary)
