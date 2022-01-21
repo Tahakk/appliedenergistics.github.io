@@ -69,3 +69,53 @@ img.item-icon {
 .DocSearch {
   min-width: 20rem;
 }
+
+.main-container {
+  align-items: start;
+
+  & > * {
+    overscroll-behavior: contain;
+  }
+
+  aside.menu {
+    position: sticky;
+    top: 0;
+    max-height: 100vh;
+    padding: 1.25rem 1.25rem 3.25em;
+    overflow-y: scroll;
+
+    &::-webkit-scrollbar {
+      width: 5px;
+      height: 5px;
+    }
+    &::-webkit-scrollbar-button {
+      width: 0px;
+      height: 0px;
+    }
+    &::-webkit-scrollbar-thumb {
+      background: #e1e1e1;
+      border: 0px none #ffffff;
+      border-radius: 50px;
+    }
+    &::-webkit-scrollbar-thumb:hover {
+      background: #ffffff;
+    }
+    &::-webkit-scrollbar-thumb:active {
+      background: #000000;
+    }
+    &::-webkit-scrollbar-track {
+      background: #666666;
+      border: 0px none #ffffff;
+      border-radius: 50px;
+    }
+    &::-webkit-scrollbar-track:hover {
+      background: #666666;
+    }
+    &::-webkit-scrollbar-track:active {
+      background: #333333;
+    }
+    &::-webkit-scrollbar-corner {
+      background: transparent;
+    }
+  }
+}
